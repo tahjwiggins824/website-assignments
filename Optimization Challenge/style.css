@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.extra-pics {
+    width: 100%;
+    max-width: 350px; /* i want images to keep the same width */
+    height: auto;  /* i want images to keep their natural height */
+    display: block; /* images no longer inline so they display nicely centered */
+    margin: 16px auto; /* images now center themselves correctly, fixing images not centering perfectly on phone sized displays */
+    border: 1px solid gray; /* some images have white edges, this will help viewers see where the image ends and white background begins */
+    border-radius: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar {
+    margin-top: 70px;
+    margin-right: 32px; /* this replaces gap */
+    text-align: right;
+}
+
+a {
+    color: #ffffff;
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+    font-size: 1rem;
+    width: 400px;
+    height: auto; /* the previous height was just experimental and unccessesary */
+    padding: 32px;
+    border: 2px solid black;
+    margin: 32px;
+    text-align: center;
+}
+
+body {
+    background-color: #372e27;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+h4 {
+    background-color: rgb(208, 255, 212);
+}
+
+label {
+    display: block;
+    margin-top: 16px
+}
+
+textarea {
+    display: block;
+    margin: auto;
+}
+
+button {
+    margin: 16px ;
+}
+/* tablets */
+@media (max-width: 900px) {
+    .box {
+        width: 300px;
+        height: auto;
+    }
+
+    .navbar {
+        margin-top: 40px;
+        margin-right: 16px;
+    }
+}
+
+/* phones */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        margin-top: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .box {
+        width: 90%;
+        height: auto;
+    }
+}
